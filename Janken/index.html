@@ -11,6 +11,13 @@
 
 <body>
     <div class="game-container">
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+
+        <select id="difficulty" class="difficulty-select">
+            <option value="easy">Easy</option>
+            <option value="hard">Hard</option>
+        </select>
+
         <h1>Rock Paper Scissors Game</h1>
         <p>First to 5 wins!</p>
         <div class="buttons">
@@ -21,20 +28,30 @@
         <div class="choices-display">
             <div class="choice-box">
                 <h3>You</h3>
-                <img id="player-img" src="images/time.png" alt="Player Choice">
+                <img id="player-img" src="images/time.png">
             </div>
+
+            <div class="vs">VS</div>
 
             <div class="choice-box">
                 <h3>Computer</h3>
-                <img id="computer-img" src="images/time.png" alt="Computer Choice">
+                <img id="computer-img" src="images/time.png">
             </div>
         </div>
+
         <p id="result"></p>
         <p id="scores">
             Your Score: <span id="user-score">0</span>
             Computer Score: <span id="computer-score">0</span>
         </p>
         <button id="reset" class="reset-btn">Reset Game</button>
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="modal-text"></h2>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+
     </div>
     <script src="janken.js"></script>
 </body>

@@ -93,3 +93,77 @@ button:hover {
     height: 80px;
     margin-top: 10px;
 }
+
+/* Dark Mode */
+.dark {
+    background-color: #121212;
+}
+
+.dark .game-container {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* VS */
+.vs {
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: center;
+}
+
+/* Animations */
+.win-glow {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px gold; }
+    to { box-shadow: 0 0 25px orange; }
+}
+
+/* Thinking Animation */
+.thinking {
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .game-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .choices-display {
+        flex-direction: column;
+    }
+}
